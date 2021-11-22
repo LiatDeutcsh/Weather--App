@@ -53,6 +53,51 @@ h2 {
 }
 
 .weatherLocation button {
+    border: none;
+    display: block;
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #fff;
+    font-weight: 700;
+    font-size: 12px;
+    background-color: #222;
+    padding: 9px 35px;
+    margin-left: 240px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.20);
+    box-shadow: 0px 1px 0 rgb(22 20 20), 2px 2px 3px #000;
+    border-radius: 30px;
+}
+
+.weatherLocation button span {
+    position: relative;
+    z-index: 1;
+}
+
+.weatherLocation button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 490%;
+    width: 140%;
+    background: linear-gradient(to top, #d9afd9 0%, #97d9e1 100%);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+}
+
+.weatherLocation button:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+
+/* .weatherLocation button {
     border: 1px solid white;
     box-shadow: 0px 1px 0 rgb(22, 20, 20), 2px 2px 3px #000;
     font-weight: 900;
@@ -76,7 +121,7 @@ h2 {
     text-shadow: -1px -1px 0 #136a65;
     -webkit-transition: all 250ms linear;
     transition: all 250ms linear;
-}
+} */
 
 .weatherLocation input:focus {
     outline: 0 none;
